@@ -18,6 +18,14 @@ public class BasicNavigations {
         // 3- Go to "https://www.tesla.com"
         driver.get("https://www.tesla.com");
 
+        // gets the title of the page
+        String currentTitle = driver.getTitle();
+        System.out.println("currentTitle = " + currentTitle);
+
+        // Gets the current URL using selenium
+        String currentURL = driver.getCurrentUrl();
+        System.out.println("currentURL = " + currentURL);
+
         // Stop code execution for 3 seconds
         Thread.sleep(3000);
 
@@ -42,9 +50,18 @@ public class BasicNavigations {
         // use navigate().to():
         driver.navigate().to("https://www.google.com");
 
+        // gets the current title after getting the Google page
+        currentTitle = driver.getTitle();
+
         // gets the title of the page
         //System.out.println("driver.getTitle() = " + driver.getTitle()); // one way to do it
-        String currentTitle = driver.getTitle();
+
+        System.out.println("currentTitle = " + currentTitle);
+
+        // Gets the current URL using selenium
+        currentURL = driver.getCurrentUrl();
+
+        System.out.println("currentURL = " + currentURL);
 
 
     }
