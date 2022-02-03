@@ -14,6 +14,13 @@ public class BasicNavigations {
         // 2- Create instance of the Selenium WebDriver
         // This is the line opening an empty browser
         WebDriver driver = new ChromeDriver();
+        //SessionID = 58DSAFASDASDF58
+
+        // This line will maximize the browser size
+        driver.manage().window().maximize();
+
+        // makes browser go full screen
+        // driver.manage().window().fullscreen();
 
         // 3- Go to "https://www.tesla.com"
         driver.get("https://www.tesla.com");
@@ -63,6 +70,10 @@ public class BasicNavigations {
 
         System.out.println("currentURL = " + currentURL);
 
+        // this will close the currently opened window
+        driver.close();
 
+        // this will close all of the opened windows
+        driver.quit();
     }
 }
