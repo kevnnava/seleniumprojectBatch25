@@ -15,14 +15,14 @@ public class TestNG_Selenium {
 
     @BeforeMethod
     public void setupMethod(){
-        //Do browser driver setup
-        //Open browser
+        // Do browser driver setup
+        // Open browser
         driver = WebDriverFactory.getDriver("chrome");
 
-        //Maximize the page
+        // Maximize the page
         driver.manage().window().maximize();
 
-        //Implicit wait
+        // Implicit wait
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
